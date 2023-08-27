@@ -20,7 +20,7 @@ body {
     margin: 0 auto;
     text-align: center;
     background-attachment: fixed;
-    background-image: url("./assets/kitchen.jpg");
+    background-image: url("./assets/kitchen_professional.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -33,10 +33,18 @@ h1 {
     margin-bottom: 20px;
     color: #444;
 }
+.center_content {
+    min-height: 700px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.85);
+}
 
 .center_text {
     color: white;
-    background: none;
+   
 }
 
 p {
