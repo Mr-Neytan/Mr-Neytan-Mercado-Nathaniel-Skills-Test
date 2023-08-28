@@ -6,7 +6,7 @@
     <title>Contact Us</title>
 </head>
 <body>
-    <form onsubmit="handleForm(event)">
+    <form onsubmit="handleForm(event)" id="contact_form">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" ><br>
         <label for="email">Enter your email:</label><br>
@@ -44,6 +44,7 @@ function handleForm(event){
         return
     }
     document.getElementById("success_message").innerHTML = "Success!"
+    document.getElementById("contact_form").reset()
     event.preventDefault()
 }
 </script>
