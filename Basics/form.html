@@ -3,19 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
 </head>
 <body>
     <form onsubmit="handleForm(event)">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" ><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" ><br><br>
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" ><br>
+        <label for="email">Enter your email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="message">Message</label><br>
+        <textarea id="message" name="mesage"></textarea>
+        </textarea>
+        <br><br>
+        <p id="success_message"></p>
         <input type="submit" value="Submit">
       </form> 
       
 <script>
 function handleForm(event){
+    let name = document.getElementById("name").value.trim()
+    let email = document.getElementById("email").value.trim()
+    let message = document.getElementById("message").value.trim()
+    let at_symbol = email.split("@").length-1
+    let space = /\s/.test(email)
+    if (name == ""){
+        document.getElementById("success_message").innerHTML = "Error: Name field is empty"
+        event.preventDefault()
+        return
+    } else if (space == true || at_symbol != 1){
+        document.getElementById("success_message").innerHTML = "Error: Please input a valid email"
+        event.preventDefault()
+        return
+    } else if (email == "") {
+        document.getElementById("success_message").innerHTML = "Error: Please input a valid email"
+        event.preventDefault()
+        return
+    } else if (message == "") {
+        document.getElementById("success_message").innerHTML = "Error: Message field is empty"
+        event.preventDefault()
+        return
+    }
+    document.getElementById("success_message").innerHTML = "Success!"
     event.preventDefault()
 }
 </script>
