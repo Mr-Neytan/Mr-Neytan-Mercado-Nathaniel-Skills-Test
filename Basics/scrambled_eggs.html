@@ -2,22 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="recipes.css">
+    <link rel="stylesheet" href="recipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scrambled Eggs</title>
 </head>
 <body>
-    <h1>Scrambled Eggs</h1>
-    <img src="./assets/scrambled-eggs.webp" alt="A picture of scrambled eggs">
+    <div class="parallax" id="parallax">
+        <div class="center_content">
+        <h1 class="center_text">Scrambled Eggs</h1>
+        <p class="center_text">All Around Delicious</p>
+    </div>
+    </div>
+    <div class="content">
     <h2>Description</h2>
-    <p>Insert Description for scrambled eggs</p>
+    <p>Insert Description for pancakes</p>
+    
     <h2>Ingredients</h2>
     <ul>
-        <li>Ingredient 1</li>
+        <li>Eggs</li>
+        <li>Milk</li>
+        <li>Salt</li>
+        <li>Pepper</li>
     </ul>
     <h2>Steps</h2>
     <ol>
-        <li>Step 1</li>
+        <li>Beat the eggs. Place them in a medium bowl, and whisk until the yolk and whites are thoroughly combined.</li>
+        <li>Preheat the pan. Brush a small nonstick skillet with olive oil, or melt a little butter inside it. Warm the skillet over medium heat.</li>
+        <li>Pour in the egg mixture, and let it cook for a few seconds, undisturbed. Then, pull a rubber spatula across the bottom of the pan to form large, soft curds of scrambled eggs.</li>
+        <li>Continue cooking over medium-low heat, folding and stirring the eggs every few seconds. As you work, make sure to scrape your spatula along the bottom and sides of the pan to continue to form curds and to prevent any part of the eggs from drying out.</li>
+        <li>For a soft, creamy scramble, stop when the eggs are mostly set, but a little liquid egg remains. Remove the pan from the heat, and season to taste with salt and pepper.</li>
     </ol>
+</div>
+<script>
+    document.getElementById("parallax").style.backgroundImage= "url(./assets/scrambled-eggs.webp)"
+</script>
 </body>
 </html>
