@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.parallax {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
+    height: 45em;
+    max-height: 1024px;
+    margin: 0 auto;
+    text-align: center;
+    background-attachment: fixed;
+    background-image: url("./assets/kitchen_professional.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #444;
+}
+.center_content {
+    min-height: 700px;
+    height: 45em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.85);
+    flex-direction: column;
+}
+
+.center_text {
+    color: white;
+   
+}
+
+p {
+    font-size: 1.9em;
+    font-family: Poppins;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+li {
+    margin: 0 15px;
+    font-size: 1.9em;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #e74c3c;
+}
+
+.content {
+    text-align: center;
+    margin-top: 0.9em;
+    width: 100%;
+    min-height: 700px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.form {
+    text-align: center;
+}
+
+.card-text{
+    font-size: 1em;
+}
+
+.card_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
