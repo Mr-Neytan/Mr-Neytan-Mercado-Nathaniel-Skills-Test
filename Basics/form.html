@@ -6,6 +6,7 @@
     <title>Contact Us</title>
 </head>
 <body>
+    <!--Form-->
     <form onsubmit="handleForm(event)" id="contact_form">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" ><br>
@@ -21,11 +22,14 @@
       
 <script>
 function handleForm(event){
+    //Get value of inputs
     let name = document.getElementById("name").value.trim()
     let email = document.getElementById("email").value.trim()
     let message = document.getElementById("message").value.trim()
+    //Double Check for extra @ symbols and spaces in email
     let at_symbol = email.split("@").length-1
     let space = /\s/.test(email)
+    //If statements for form validation
     if (name == ""){
         document.getElementById("success_message").innerHTML = "Error: Name field is empty"
         event.preventDefault()

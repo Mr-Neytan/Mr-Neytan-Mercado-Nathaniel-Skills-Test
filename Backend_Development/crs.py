@@ -1,7 +1,12 @@
+# Create a class Account that must have these two instance 
+# Attributes: ID (a string of a 5 digit number that identifies a specific individual), and name (a string).
 class Account:
     def __init__(self, ID:str, name:str):
         self.id = ID
         self.name = name
+
+# StudentAccount must inherit from Account, have 3 additional instance attributes named classes, 
+# is_enlistment_locked and is_enlisted, and 2 methods named add_class() and lock_enlistment(). 
 class StudentAccount(Account):
     def __init__(self, ID:str, name:str):
         super().__init__(ID, name)
@@ -9,7 +14,6 @@ class StudentAccount(Account):
         self.is_enlistment_locked = False
         self.is_enlisted = False
         
-
     def add_class(self, subject:str):
         self.classes += [subject]
     
@@ -17,6 +21,8 @@ class StudentAccount(Account):
         self.is_enlisted = True
         print(f"{self.name} has locked enlistment")
 
+# AdviserAccount must inherit from Account too, and have 2 additional instance attributes 
+# named advisees and enlisted advisees, and have 3 methods named add_advisee(), print_advisees(), and lock_enlistment_for().  
 class AdviserAccount(Account):
     def __init__(self, ID: str, name: str):
         super().__init__(ID, name)
@@ -42,7 +48,7 @@ class AdviserAccount(Account):
 
 
 
-
+#Test Code
 student1 = StudentAccount("05524", "Ross")
 student1.add_class("Class 1")
 student1.add_class("Class 2")
