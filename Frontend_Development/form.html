@@ -19,6 +19,7 @@
     </style>
 </head>
 <body>
+    <!--Navbar-->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="home.html">Kitchen Buddy</a>
@@ -43,6 +44,9 @@
           </div>
         </div>
       </nav>
+    <!--End of Navbar-->
+
+    <!--Form-->
     <h1 style="text-align: center; margin-top: 0.5em;">Contact Us</h1>
     <form style="width:65%; margin: auto;" onsubmit="handleForm(event)" id="contact_form">
         <div class="mb-3">
@@ -63,11 +67,14 @@
     </form>
 <script>
 function handleForm(event){
+  //Get value of inputs
     let name = document.getElementById("name").value.trim()
     let email = document.getElementById("email").value.trim()
     let message = document.getElementById("message").value.trim()
+  //Double Check for extra @ symbols and spaces in email
     let at_symbol = email.split("@").length-1
     let space = /\s/.test(email)
+  //If statements for form validation
     if (name == ""){
         document.getElementById("success_message").innerHTML = "Error: Name field is empty"
         event.preventDefault()
